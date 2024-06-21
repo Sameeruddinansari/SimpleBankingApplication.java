@@ -46,7 +46,7 @@ public class SimpleBankingApplication_Task_2 {
         double amount = scanner.nextDouble();
 
         if (amount > 0) {
-            balance = amount + balance;
+            balance += amount;
             System.out.println("Successfully deposited $" + amount);
         } else {
             System.out.println("Invalid amount. Please enter a positive value.");
@@ -58,7 +58,7 @@ public class SimpleBankingApplication_Task_2 {
         double amount = scanner.nextDouble();
 
         if (amount > 0 && amount <= balance) {
-            balance = amount - balance;
+            balance -= amount ;
             System.out.println("Successfully withdraw $" + amount);
         } else if (amount > balance) {
             System.out.println("Insufficient balance. You cannot withdraw more than the current balance.");
